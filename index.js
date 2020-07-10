@@ -4,20 +4,14 @@ function depthFirstSearch(rootNode, vertices, edges)
   let visited = [];
   stack.push(rootNode)
   
-  
-  console.log(`starting stack`)
-  console.log(stack)
-  
   while(stack.length > 0)
   {
     let currentNode = stack.pop()
-    console.log(`remaining stack:`)
     if(currentNode.discovered === null)
     {
       currentNode.discovered = true
       visited.push(currentNode)
-      console.log(`visited updated`)
-      console.log(visited)
+
       for(let i = 0; i < edges.length; i++)
       {
         if(edges[i][0] === currentNode)
