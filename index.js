@@ -17,7 +17,7 @@ function depthFirstSearch(rootNode, vertices, edges)
         {
           stack.push(edges[i][1]);
         }
-        else if(edges[i][0] == currentNode.name)
+        else if(edges[i][1] == currentNode.name)
         {
           stack.push(edges[i][0])
         }
