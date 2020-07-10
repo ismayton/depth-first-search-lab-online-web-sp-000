@@ -2,7 +2,7 @@ function depthFirstSearch(rootNode, vertices, edges)
 {
   let stack = [];
   let visited = [];
-  stack.push(rootNode)
+  stack.push(rootNode.name)
   
   while(stack.length > 0)
   {
@@ -13,11 +13,11 @@ function depthFirstSearch(rootNode, vertices, edges)
       visited.push(currentNode)
       for(let i = 0; i < edges.length; i++)
       {
-        if(edges[i][0] === currentNode.name)
+        if(edges[i][0] === currentNode)
         {
           stack.push(edges[i][1]);
         }
-        else if(edges[i][1] == currentNode.name)
+        else if(edges[i][1] == currentNode)
         {
           stack.push(edges[i][0])
         }
