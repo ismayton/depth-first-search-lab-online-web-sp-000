@@ -34,7 +34,7 @@ function depthFirstSearch(rootNode, vertices, edges)
           console.log(stack)
           
              
-          }
+          
         }
       }
     }
