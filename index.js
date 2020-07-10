@@ -14,7 +14,7 @@ function depthFirstSearch(rootNode, vertices, edges)
 
       for(let i = 0; i < edges.length; i++)
       {
-        if(edges[i][0] === currentNode)
+        if(edges[i][0] === currentNode.name)
         {
           let adjName = edges[i][1]
           console.log(`found in edge`)
@@ -49,7 +49,7 @@ function findObjectByKey(array, key, value)
 {
   for (var i = 0; i < array.length; i++) 
   {
-    if (array[i][key] === value) 
+    if (array[i].key === value) 
     {
       return array[i];
     }
