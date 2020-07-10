@@ -23,7 +23,7 @@ function depthFirstSearch(rootNode, vertices, edges)
         if(edges[i][0] === currentNode)
         {
           let adjName = edges[i][1]
-          console.log(`found in stack`)
+          console.log(`found in edge`)
           console.log(adjName)
           for(let j = 0; j < vertices.length; j++)
           {
@@ -39,12 +39,13 @@ function depthFirstSearch(rootNode, vertices, edges)
         else if(edges[i][1] == currentNode.name)
         {
           let adjName = edges[i][0]
-          console.log(`found in stack`)
+          console.log(`found in edge`)
           console.log(adjName)
           for(let j = 0; j < vertices.length; j++)
           {
              if(vertices[j][name] === adjName)
              {
+               console.
                stack.push(vertices[j])
                console.log(`added to stack:`)
                console.log(stack)
