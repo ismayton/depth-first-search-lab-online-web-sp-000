@@ -14,6 +14,7 @@ function depthFirstSearch(rootNode, vertices, edges)
 
       for(let i = 0; i < edges.length; i++)
       {
+        
         ///if current node is the first entry
         if(edges[i][1] === currentNode.name)
         {
@@ -30,6 +31,7 @@ function depthFirstSearch(rootNode, vertices, edges)
             }
           }
         }
+        
         ///if current node is second entry
         else if(edges[i][0] == currentNode.name)
         {
@@ -50,18 +52,4 @@ function depthFirstSearch(rootNode, vertices, edges)
     }
   }
   return visited;
-}
-
-
-
-function findObjectByKey(array, key, value) 
-{
-  for (var i = 0; i < array.length; i++) 
-  {
-    if (array[i].key === value) 
-    {
-      return array[i];
-    }
-  }
-return null;
 }
