@@ -14,21 +14,38 @@ function depthFirstSearch(rootNode, vertices, edges)
 
       for(let i = 0; i < edges.length; i++)
       {
+        ///if current node is the first entry
         if(edges[i][0] === currentNode.name)
         {
           let adjName = edges[i][1]
           console.log(`found in edge`)
           console.log(adjName)
           stack.push(adjName)
-          
+          for(let j = 0; j < vertices.length; j++)
+          {
+            if(vertices[j].name == adjName)
+            {
+              stack.push(vertices[j])
+              console.log(`added to stack:`)
+              console.log(stack)
+            }
+          }
         }
-        
+        ///if current node is second entry
         else if(edges[i][1] == currentNode.name)
         {
           let adjName = edges[i][0]
           console.log(`found in edge`)
           console.log(adjName)
-          stack.push(adjName)
+          for(let j = 0; j < vertices.length; j++)
+          {
+            if(vertices[j].name == adjName)
+            {
+              stack.push(vertices[j])
+              console.log(`added to stack:`)
+              console.log(stack)
+            }
+          }
         }
       }
     }
