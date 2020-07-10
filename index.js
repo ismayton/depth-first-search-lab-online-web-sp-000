@@ -15,13 +15,25 @@ function depthFirstSearch(rootNode, vertices, edges)
       {
         if(edges[i][0] === currentNode)
         {
-          adjName = edges[i][1]
+          let adjName = edges[i][1]
           for(let j = 0; j < vertices.length; j++)
-          
+          {
+             if(vertices[j].name === adjName)
+             {
+               stack.push(vertices[j])
+             }
+          }
         }
         else if(edges[i][1] == currentNode)
         {
-          stack.push(edges[i][0])
+          let adjName = edges[i][0]
+          for(let j = 0; j < vertices.length; j++)
+          {
+             if(vertices[j].name === adjName)
+             {
+               stack.push(vertices[j])
+             }
+          }
         }
       }
     }
