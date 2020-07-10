@@ -32,9 +32,9 @@ function depthFirstSearch(rootNode, vertices, edges)
           }
         }
         ///if current node is second entry
-        else if(edges[i][1] == currentNode.name)
+        else if(edges[i][0] == currentNode.name)
         {
-          let adjName = edges[i][0]
+          let adjName = edges[i][1]
           console.log(`found in edge`)
           console.log(adjName)
           for(let j = 0; j < vertices.length; j++)
