@@ -19,7 +19,8 @@ function depthFirstSearch(rootNode, vertices, edges)
           let adjName = edges[i][1]
           console.log(`found in edge`)
           console.log(adjName)
-          stack.push(vertices.adjName)
+          let selectedVertex = findObjectByKey(vertices, name, adjName)
+          stack.push(selectedVertex)
           console.log(`added to stack:`)
           console.log(stack)
         }
@@ -40,4 +41,18 @@ function depthFirstSearch(rootNode, vertices, edges)
     }
   }
   return visited;
+}
+
+
+
+function findObjectByKey(array, key, value) 
+{
+  for (var i = 0; i < array.length; i++) 
+  {
+    if (array[i][key] === value) 
+    {
+      return array[i];
+    }
+  }
+return null;
 }
