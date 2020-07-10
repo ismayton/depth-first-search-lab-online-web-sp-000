@@ -24,7 +24,7 @@ function depthFirstSearch(rootNode, vertices, edges)
           console.log(stack)
         }
         
-        else if(edges[i][1] == currentNode.name)
+        else if(edges[i][1] == currentNode)
         {
           let adjName = edges[i][0]
           console.log(`found in edge`)
@@ -39,5 +39,5 @@ function depthFirstSearch(rootNode, vertices, edges)
       }
     }
   }
-  return visited
+  return visited;
 }
