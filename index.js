@@ -2,7 +2,7 @@ function depthFirstSearch(rootNode, vertices, edges)
 {
   let stack = [];
   let visited = [];
-  stack.push(rootNode.name)
+  stack.push(rootNode)
   
   while(stack.length > 0)
   {
