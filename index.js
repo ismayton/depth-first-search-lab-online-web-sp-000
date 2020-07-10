@@ -34,7 +34,7 @@ function depthFirstSearch(rootNode, vertices, edges)
           stack.push(vertices.adjName)
           console.log(`added to stack:`)
           console.log(stack)
-          
+        }
              
           
         }
