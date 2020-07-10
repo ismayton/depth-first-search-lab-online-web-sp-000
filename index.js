@@ -6,6 +6,7 @@ function depthFirstSearch(rootNode, vertices, edges)
   
   console.log(`starting stack`)
   console.log(stack)
+  
   while(stack.length > 0)
   {
     let currentNode = stack.pop()
